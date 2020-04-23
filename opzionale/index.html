@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEST HANDELBARS</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JQUERY-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+
+  <!--HANDLEBARS-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js'></script>
+
+
+  <!-- JS-->
+  <script src="js/main.js"></script>
+</head>
+<body>
+
+  <h1>My chat</h1>
+
+  <div>
+    <input type="text" class="message-input">
+    <button class="message-btn">Invia</button>
+  </div>
+
+  <main class="chat">
+
+  </main>
+
+
+
+
+
+
+  <!-- TEMPLATE HANDLEBARS-->
+  <script id="entry-template" type="text/x-handlebars-template">
+    <div class="message {{ userClass }}"> 
+      <div class="message-text">{{ text }}</div>
+        <div class="message-time">{{ time }}</div>
+    </div>
+  </script>
+</body>
+</html>
