@@ -17,7 +17,8 @@ $(document).ready(function () {
     cognome: 'rizzi',
     età: 23
   }
+
   for(var key in studente) {
-    console.log(studente[key]);
+    console.log( key + ": " + studente [key] );
   }
 });
