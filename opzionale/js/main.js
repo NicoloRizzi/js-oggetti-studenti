@@ -41,7 +41,7 @@ $(document).ready(function () {
         userClass: 'message-recived'
       }
       var html = template(data);
-      chat.append(html)
+      chat.append(html);
     },1000);
   });
 
@@ -50,24 +50,27 @@ $(document).ready(function () {
     var messageTemp = [
       {
         text: 'Hello word',
-        time: '15:15'
+        time: '15:15',
+        userClass: 'message-sent'
       },
 
       {
         text: 'Hey bro',
-        time: '15:16'
+        time: '15:16',
+        userClass: 'message-recived'
       },
 
       {
         text: 'Lorem',
-        time: '15:17'
+        time: '15:17',
+        userClass:'message-sent'
       },
     ] // end array obj
-    for(var i = 0; i < messageTemp.length; i++) {
-      console.log(messageTemp[i]);
-      
-    }
-    
 
-  })
+    for(var i=0; i < messageTemp.length; i++){
+      var html = template(messageTemp[i]);
+      console.log(html);
+      chat.append(html);
+    }
+  })// end setTimeOut
 }); // END DOC READY
