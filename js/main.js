@@ -19,6 +19,60 @@ $(document).ready(function () {
   }
 
   for(var key in studente) {
+    console.log(key);
+    console.log(studente[key]);
     console.log( key + ": " + studente [key] );
   }
 });
+
+
+// esercizio 2
+
+var students = [
+  {
+    name: 'Fabio',
+    surname: 'Gadau'
+  },
+  {
+    name: 'Paolo',
+    surname: 'Duzioni'
+  },
+  {
+    name: 'Marco',
+    surname: 'Silvestri'
+  },
+  {
+    name: 'Luigi',
+    surname: 'Smilzo'
+  },
+]
+
+for (var i = 0; i < students.length; i++) {
+  var student = students[i]
+  //console.log(student);
+
+  // output
+  console.log('Student', student.name, student.surname);
+  
+  
+}
+
+// esercizio 3
+
+var newName = prompt('Inserisci il nome');
+var newSurname = prompt('Inserisci cognome');
+/* seconda modalità
+var newObj = {
+  name: newName,
+  surname: newSurname
+};
+
+students.push(newObj); */
+
+students.push( {
+  name: newName,
+  surname: newSurname
+});
+
+console.log(students);
+

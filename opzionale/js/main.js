@@ -1,3 +1,11 @@
+/**
+ * Esercizio di oggi: Array e oggetti (chat con Handlebars)
+Descrizione:
+Estendere la chat fatta con handlebars inserendo i messaggi iniziali, visibili al caricamento della pagina, generati da un array di oggetti.
+Gli oggetti conterranno proprietà come testo e orario
+Usiamo Handlebars per la generazione anche di questi messaggi, come avete fatto ieri per i messaggi inseriti dall’utente
+Pushate sempre nella repo dell’esercizio di ieri.
+ */
 $(document).ready(function () {
 
   // ref
@@ -37,4 +45,29 @@ $(document).ready(function () {
     },1000);
   });
 
+  // esercizio OGGI
+  setTimeout(function(){
+    var messageTemp = [
+      {
+        text: 'Hello word',
+        time: '15:15'
+      },
+
+      {
+        text: 'Hey bro',
+        time: '15:16'
+      },
+
+      {
+        text: 'Lorem',
+        time: '15:17'
+      },
+    ] // end array obj
+    for(var i = 0; i < messageTemp.length; i++) {
+      console.log(messageTemp[i]);
+      
+    }
+    
+
+  })
 }); // END DOC READY
